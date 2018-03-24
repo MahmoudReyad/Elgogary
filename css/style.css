@@ -1,0 +1,200 @@
+/*Start Main Rules  */
+body {
+  box-sizing: border-box;
+  background-color: #514f49;
+  font-family: customFont2;
+  /* background-image: url('../images/fingerprint.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%; */
+  overflow-x: hidden;
+}
+/*Navbar styling  */
+.navbar {
+  border-radius: 0;
+  /* margin-bottom: 30px; */
+
+
+  border: none;
+}
+.navbar-default {
+  background: #514f49;
+  border: none;
+  color: #84837d;
+  margin-bottom: 15px;
+}
+.nav {
+
+}
+  .navbar-default .navbar-nav>.active>a,
+  .navbar-default .navbar-nav>.active>a:focus,
+  .navbar-default .navbar-nav>.active>a:hover,
+  .navbar-default .navbar-nav>li>a:hover ,
+  .navbar-default .navbar-nav>li>a:focus,
+  .navbar-default .navbar-nav>.open>a,
+  .navbar-default .navbar-nav>.open>a:focus,
+  .navbar-default .navbar-nav>.open>a:hover
+  {
+    background: none;
+    color: #f6b221;
+  }
+  .dropdown-menu>li>a {
+    color: #514f49;
+  }
+  .dropdown-menu>li>a:hover {
+    background: none;
+    color: #f4f5ef;
+  }
+  .dropdown-menu {
+    background-color: #f6b221;
+    margin-right: 11px;
+    border-radius: 0;
+  }
+  .dropdown-menu .divider {
+    background-color: #84837d;
+  }
+  .container-fluid>.navbar-collapse,
+  .container-fluid>.navbar-header,
+   .container>.navbar-collapse,
+   .container>.navbar-header {
+     margin-bottom: 30px;
+   }
+   .navbar-default .navbar-toggle {
+     border-color: #f6b221;
+     margin-top: 22px;
+   }
+   .navbar-default .navbar-toggle .icon-bar {
+     background-color: #f6b221;
+   }
+   .navbar-default .navbar-toggle:hover{
+      background-color: #f4f5ef;
+   }
+   .navbar-collapse {
+     text-align: center;
+     background-color: #514f49;
+   }
+
+   .navbar-nav .open .dropdown-menu {
+     text-align: center;
+   }
+
+   /*Start Slider  */
+   .carousel  {
+     background-image: url(../images/fingerprint.png);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: 50%;
+     /* padding: 10px 0 10px; */
+     background-color: #514f49;
+     border: none;
+     text-shadow: 0;
+     margin-top: 8%;
+     padding-bottom: 30px;
+   }
+   .carousel .item {
+     padding: 5px 0;
+     margin-bottom: 20px;
+
+   }
+   .carousel-control.left, .carousel-control.right{
+    background: none !important;
+    filter: progid:none !important;
+}
+   .carousel-control ,
+   .carousel-control:hover ,
+   .carousel-control:focus  {
+     background-color: #514f49;
+   }
+
+    .carousel  .carousel-inner  .item img {
+      max-width: 50%;
+      height: 25em;
+      margin: 0 35%;
+    }
+    .carousel  .carousel-inner  .item:nth-of-type(2) img{
+      margin: auto;
+    }
+    .carousel-control img {
+      margin: 80% 0;
+    }
+    .carousel-indicators li {
+      width: 8px;
+      height: 8px;
+      background-color: #84837d;
+    }
+    .carousel-indicators .active {
+      width: 10px;
+      height:10px;
+    }
+   /*End SLider  */
+
+/*  */
+.clearfix {
+  clear: both;
+}
+footer {
+  color: #fff;
+  overflow: hidden;
+  color: #84837d;
+  /* position: absolute;
+  bottom: 0; */
+  overflow: hidden;
+
+}
+footer p{
+  float: left;
+}
+footer img {
+  float: right;
+  margin-left: 10px;
+  cursor: pointer;
+}
+/*Custom Font */
+@font-face {
+  font-family: customFont;
+  src:url(../fonts/Poppins-Bold_0.ttf);
+}
+@font-face {
+  font-family: customFont2;
+  src:url(../fonts/Poppins-Regular_0.ttf);
+}
+/*Start Media query  */
+@media (max-width: 576px) {
+  .carousel {
+    margin-top: 20%;
+  }
+}
+@media(max-width:767px){
+  .carousel  .carousel-inner  .item img {
+    max-width: 90%;
+    height: 10em;
+    margin: 0 20%;
+  }
+  .carousel {
+    margin-top: 20%;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #f6b221;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #84837d;
+}
+
+}
+@media(min-width:768px) and (max-width:991px){
+  .carousel  .carousel-inner  .item img {
+    max-width: 90%;
+    height: 10em;
+    margin: 0 25%;
+  }
+  /* .carousel {
+    margin-top: 30%;
+  } */
+
+
+}
+@media(min-width:992px){
+
+}
+@media(min-width:1200px){}
