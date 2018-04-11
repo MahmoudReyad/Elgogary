@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/lightgallery.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="css/projects.css">
-    <title>Projects</title>
+    <title>Kitchens</title>
   </head>
   <body>
     <!--Start Header  -->
@@ -31,59 +31,54 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active" data-value =".aboutus"><a href="#">About us <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#">Contact us</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Living Room</a></li>
-                      <li><a href="#">Bedroom</a></li>
-                      <li><a href="#">Dinning Room</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Kitchen Enterway</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Large Spaces</a></li>
-                    </ul>
-                  </li>
+                  <li  data-value =".aboutus"><a href="index.html">Home</a></li>
+                  <li data-value =".aboutus"><a href="aboutus.html">About us</a></li>
+                    <li class="dropdown active">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="sr-only">(current)</span> <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="livingrooms.html">Living Room</a></li>
+                        <li><a href="bedrooms.html">Bedroom</a></li>
+                        <li><a href="diningrooms.html">Dinning Room</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="kitchen.html">Kitchen Enterway</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Large Spaces</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contactus.php">Contact us</a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">AR</a></li>
+                      <li><a href="ar/kitchen.html">AR</a></li>
                     </ul>
                   </li>
                 </ul>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
-          </nav> <!-- End Navbar -->
-            <!-- Start Bedrooms slider-  -->
-            <div class="slide">
+          </nav>
+          <!--Start Slider-->
+          <div class="container">
+            <div class="row"><h1 class="text-center">Kitchens.</h1></div>
+            <h1 class="text-center"> Coming Soon</h1>
+          </div>
+          <div class="myslider">
+            <div class="row">
               <div class="container">
-                <div class="row">
                   <div class="col-xs-12">
-                    <div id="lightgallery">
-                        <a href="images/rooms.png">
-                            <img class="img-responsive" src="images/rooms.png" />
-                        </a>
-                        <a href="images/SLIDER1.png">
-                            <img class="img-responsive" src="images/SLIDER1.png" />
-                        </a>
-                        <a href="images/SLIDER1.png">
-                            <img class="img-responsive" src="images/SLIDER1.png" />
-                        </a>
-                        <a href="images/SLIDER1.png">
-                            <img class="img-responsive"  src="images/SLIDER1.png" />
-                        </a>
-                        <a href="images/SLIDER1.png">
-                            <img class="img-responsive" src="images/SLIDER1.png" />
-                        </a>
+                    <div class="owl-carousel">
+
+
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
 
-            <!--End Bed Room Slider  -->
-
+            </div>
+          <!--End Slider  -->
+      <div class="container">
+      </div> <!--Header Container-->
+    </header>
+    <!--End Header  -->
     <!--Start Footer  -->
     <div class="clearfix"></div>
     <footer>
@@ -91,17 +86,20 @@
         <div class="row">
           <div class="col-xs-12">
             <p>&copy;  <span id="date"></span> El Gogary Furniture.</p>
-            <img src="images/facebook.png" alt="Facebook">
-            <img src="images/insta.png" alt="insta">
+            <a href="https://www.instagram.com/elgogaryfurnitureegypt/" id="f-insta" > <img src="images/insta.png" alt="insta"></a>
+            <a href="https://www.facebook.com/elgogaryfurnitureegypt/" id="f-facebook"><img src="images/facebook.png" alt="Facebook"></a>
           </div>
 
         </div>
       </div>
     </footer>
+
+
     <!--End Footer  -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/lightgallery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

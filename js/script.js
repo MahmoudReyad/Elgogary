@@ -14,12 +14,22 @@ $(document).ready(function(){
       var d = new Date();
       var n = d.getFullYear();
       $('#date').append(n);
-
-
-
-      // Nice Svroll
-      // Start slider2
-
-        $("#lightgallery").lightGallery();
+      $('.owl-carousel').owlCarousel({
+    center: true,
+    items:2,
+    dots:true,
+    nav:true,
+    navText:['<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>', '<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>'],
+    loop:true,
+    margin:5,
+    responsive:{
+        600:{
+            items:3
+        }
+    }
+});
+$("[data-fancybox]").fancybox({
+		// Options will go here
+	});
 
 });//End of document.ready

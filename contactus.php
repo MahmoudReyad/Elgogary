@@ -1,3 +1,26 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+  if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $subject = 'Inquiring';
+    $header = "From" . $name;
+    if(mail('theghostspy1@gmail.com' , $subjetc  , $message , $header)){
+      $success = true;
+    }
+    else {
+      $faild = true;
+      echo "Faild";
+    }
+
+  }
+} else {
+  echo "Faild";
+}
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +29,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="css/contactus.css">
+    <title>Contact us</title>
   </head>
   <body>
     <!--Start Header  -->
@@ -28,8 +52,8 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active" data-value =".aboutus"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                  <li data-value =".aboutus"><a href="aboutus.html">About us</a></li>
+                  <li  data-value =".aboutus"><a href="index.html">Home</a></li>
+                  <li  data-value =".aboutus"><a href="aboutus.html">About us </a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                       <ul class="dropdown-menu">
@@ -42,11 +66,11 @@
                         <li><a href="#">Large Spaces</a></li>
                       </ul>
                     </li>
-                    <li><a href="contactus.php">Contact us</a></li>
+                    <li class="active" data-value =".contactus"><a href="#">Contact us<span class="sr-only">(current)</span></a></li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="ar/index.html">AR</a></li>
+                      <li><a href="ar/contactus.php">AR</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -54,42 +78,57 @@
             </div><!-- /.container-fluid -->
           </nav>
           <!--Start Slider-->
-              <div id="myslider" class="carousel slide text-center" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#myslider" data-slide-to="0" class="active"></li>
-              <li data-target="#myslider" data-slide-to="1"></li>
-              <li data-target="#myslider" data-slide-to="2"></li>
-            </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="images/SLIDER1.png" class="img-responsive" alt="Slider 1">
-              </div>
-              <div class="item ">
-                <img src="images/SLIDER2.png" class="img-responsive" alt="Slider 2">
-              </div>
-              <div class="item ">
-                <img src="images/SLIDER3.png" class="img-responsive" alt="Slider 3">
-              </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#myslider" role="button" data-slide="prev">
-               <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myslider" role="button" data-slide="next">
-               <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
           <!--End Slider  -->
       <div class="container">
       </div> <!--Header Container-->
     </header>
     <!--End Header  -->
+    <!--Start Contactus  -->
+    <div class="contactus">
+      <div class="container">
+        <div class="col-lg-6">
+          <div class="address">
+            <h1>Showroom.</h1>
+            <p>7 Mostafa Elnahas St. Extension,<br>Beside Al-Manhal School, Nasr City,</p>
+            <p>tel.: +20 109 960 0014 - +20 100 914 5688 <br>info@elgogaryfurniture.com</p>
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27626.428574699024!2d31.346157090469344!3d30.0568316901623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAzJzI0LjYiTiAzMcKwMjEnNDkuMiJF!5e0!3m2!1sen!2seg!4v1522679754369"
+               width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+             <h2>Factory.</h2>
+             <p>Al-Khayata, In front of Masjid Al-Taqwa. <br>Dammietta, Egypt.</p>
+
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form" id="contact-form">
+            <h1>Get in touch.</h1>
+            <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+              <div class="form-group">
+                <label>Name*</label>
+                <input class="form-control" type="name" required pattern="^([a-zA-Z\s]{10,})$">
+              </div>
+              <div class="form-group">
+                <label>Email*</label>
+                <input class="form-control" type="email" required>
+              </div>
+              <div class="form-group">
+                <label>Subject*</label>
+                <input class="form-control" type="subject" required maxlength="25" pattern="^([a-zA-Z\s]{10,})$">
+              </div>
+              <div class="form-group">
+                <label>Message*</label>
+                <textarea class="form-control" name="name" rows="8" cols="80" required></textarea>
+              </div>
+              <input type="submit" value="submit" class="btn btn-primary" name="submit">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Contact us  -->
     <!--Start Footer  -->
     <div class="clearfix"></div>
     <footer>
@@ -104,11 +143,10 @@
         </div>
       </div>
     </footer>
-
-
     <!--End Footer  -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/validation.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

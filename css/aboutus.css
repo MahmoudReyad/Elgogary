@@ -10,16 +10,5 @@
 }
 .aboutus span {
   color: #f8b21b;
-}
-.slide {
-  overflow: hidden;
-  text-align: center;
-  padding:20px 10px;
 
-}
-#lightgallery img  {
-  max-width: 300px;
-  float: left;
-  margin-bottom: 50px;
-  margin-right: 15px;
 }
